@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#7</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<!--{/*bable -> javascript의 예약어를 html용어로 사용할 수 있도록 한다 ex)class, for*/}-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<!--{/*bable -> jsx type을 해석해서 javascript로 변환시켜준다.
+*/}-->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script  type="text/babel">
+  const root = document.getElementById("root");
+  {/* React 맞춤 리랜더링 */}
+  {/* useState() => data, modifier */}
+  {/* useState(초깃값), set(function or 연산) */}
+  // 시간, 단위 등 변경해보기
+  function App() {
+    // Array
+    const [amount, setAmount] = React.useState(0);
+    const onChange = (event) => {
+      setAmount(event.target.value);
+    }
+    const onReset = () => {setAmount(0)}
+
+    const [flipped, setFlipped] = React.useState(false);
+    const onFlip = () => {
+      onReset();
+      setFlipped((current) => !current)
+    };
+    return (
+    <div>
+      <h1>
+        Super Converter
+      </h1>
+      <div>
+        <label for="min">Minutes</label>
+        <input 
+          value={flipped ? amount * 60 : amount} 
+          id="min" 
+          placeholder="Minutes" 
+          type="number"
+          onChange={onChange}
+          disabled={flipped}
+        />
+      </div>
+    <div>
+      <label for="hour">Hours</label>
+      <input 
+        value={flipped ? amount : Math.round(amount / 60)} 
+        id="hour" 
+        placeholder="Hours" 
+        type="number"
+        onChange={onChange}
+        disabled={!flipped}
+      />
+    </div>
+
+      <button onClick={onReset}>Reset</button>
+      <button onClick={onFlip}>{flipped ? "Turn Back" : "Flipped"}</button>
+    </div>
+    )
+  };
+  ReactDOM.render(<App />, root);
+
+
+</script>
+</html>
+
+

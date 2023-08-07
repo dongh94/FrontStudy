@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#6</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<!--{/*bable -> jsx type을 해석해서 javascript로 변환시켜준다.
+*/}-->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script  type="text/babel">
+  const root = document.getElementById("root");
+  {/* React 맞춤 리랜더링 */}
+  {/* useState() => data, modifier */}
+  {/* useState(초깃값), set(function or 연산) */}
+
+  function App() {
+    const [counter, setCounter] = React.useState(0);
+    const countUp = () => {
+      // setCounter(counter + 1);
+      setCounter((current) => current + 2);
+
+    }
+    return (
+    <div>
+      <h3>
+        Total clicks : {counter}
+      </h3>
+      <button onClick={countUp}>
+        Click me
+      </button>
+    </div>
+    )
+  };
+  ReactDOM.render(<App />, root);
+
+
+</script>
+</html>
+
+

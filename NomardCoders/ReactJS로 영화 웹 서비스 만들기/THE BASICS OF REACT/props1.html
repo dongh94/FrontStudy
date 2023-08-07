@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#9</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<!--{/*bable -> javascript의 예약어를 html용어로 사용할 수 있도록 한다 ex)class, for*/}-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<!--{/*bable -> jsx type을 해석해서 javascript로 변환시켜준다.
+*/}-->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  function Btn({banana, big}) {
+    return (<button
+      style={{
+        backgroundColor: "tomato",
+        color: "white",
+        padding: "10px 20px",
+        border: 1,
+        borderRadius: 10,
+        fontSize: big ? 18 : 12
+      }}
+    >
+      {banana}
+    </button>
+
+    )
+  }
+  function App() {
+
+    return (
+      <div>
+        <Btn banana="Save Changes" big={true}/>
+        <Btn banana="Continue" big={false}/>
+      </div>
+    )
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.render(<App />, root);
+
+</script>
+
+</html>

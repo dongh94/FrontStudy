@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#8</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<!--{/*bable -> javascript의 예약어를 html용어로 사용할 수 있도록 한다 ex)class, for*/}-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<!--{/*bable -> jsx type을 해석해서 javascript로 변환시켜준다.
+*/}-->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script  type="text/babel">
+  const root = document.getElementById("root");
+  {/* React 맞춤 리랜더링 */}
+  {/* useState() => data, modifier */}
+  {/* useState(초깃값), set(function or 연산) */}
+  // 시간, 단위 등 변경해보기
+  function MinToHour() {
+        // Array
+        const [amount, setAmount] = React.useState(0);
+        const onChange = (event) => {
+          setAmount(event.target.value);
+        }
+        const onReset = () => {setAmount(0)}
+    
+        const [flipped, setFlipped] = React.useState(false);
+        const onFlip = () => {
+          onReset();
+          setFlipped((current) => !current)
+        };
+        return (
+        <div>
+          <div>
+            <label for="min">Minutes</label>
+            <input 
+              value={flipped ? amount * 60 : amount} 
+              id="min" 
+              placeholder="Minutes" 
+              type="number"
+              onChange={onChange}
+              disabled={flipped}
+            />
+          </div>
+        <div>
+          <label for="hour">Hours</label>
+          <input 
+            value={flipped ? amount : Math.round(amount / 60)} 
+            id="hour" 
+            placeholder="Hours" 
+            type="number"
+            onChange={onChange}
+            disabled={!flipped}
+          />
+        </div>
+    
+          <button onClick={onReset}>Reset</button>
+          <button onClick={onFlip}>{flipped ? "Turn Back" : "Flipped"}</button>
+        </div>
+        )
+
+  }
+  function KimToMiles() {
+
+    return (
+      <h1>
+        ok
+      </h1>
+
+    );
+  }
+  function App() {
+    const [index, setIndex] = React.useState("xx")
+    const onSelect = (event) => {
+      setIndex(event.target.value)
+    }
+    return (
+      <div>
+        <h1>Super Converter</h1>
+        <select value={index} onChange={onSelect} name="converter" id="converter">
+          <option value="xx">Select your units</option>
+          <option value="0">Minutes & Hours</option>
+          <option value="1">Km & Miles</option>
+        </select>
+        <hr />
+        {index === "xx" ? "Please Select !" : null}
+        {index === "0" ? <MinToHour /> : null}
+        {index === "1" ? <KimToMiles /> : null}
+      </div>
+    )
+  };
+  ReactDOM.render(<App />, root);
+
+
+</script>
+</html>
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#10</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<!--{/*bable -> javascript의 예약어를 html용어로 사용할 수 있도록 한다 ex)class, for*/}-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<!--{/*bable -> jsx type을 해석해서 javascript로 변환시켜준다.
+*/}-->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script type="text/babel">
+  function Btn({ text, onClick, fontSize = 18}) {
+    console.log(text, "was rendered")
+    return (<button
+      onClick={onClick}
+      style={{
+        backgroundColor: "tomato",
+        color: "white",
+        padding: "10px 20px",
+        border: 1,
+        borderRadius: 10,
+        fontSize,
+      }}
+    >
+      {text}
+    </button>
+
+    )
+  }
+
+  // 부모의 state가 바뀌면 해당 child가 모두 rerending 되는데
+  // memo로 관리하면 부모의 state가 바뀐 영역의 child만 render
+  const MemorizedBtn = React.memo(Btn);
+
+
+  // Type을 지정해 줄 수 있다.
+  MemorizedBtn.propTypes = {
+    text: PropTypes.string,
+    fontSize: PropTypes.number.isRequired,
+  }
+
+  function App() {
+    const [value, setValue] = React.useState("Save Changes")
+    const changeValue = () => {
+      setValue("Revert Changes")
+    }
+    const changeValue2 = () => {
+      setValue("Continue Changes")
+    }
+    return (
+      <div>
+        <MemorizedBtn text={value} onClick={changeValue} fontSize={34} />
+        <MemorizedBtn text="Continue" onClick={changeValue2} />
+      </div>
+    )
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.render(<App />, root);
+
+</script>
+
+</html>
