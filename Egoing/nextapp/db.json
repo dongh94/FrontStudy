@@ -1,0 +1,46 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "read1",
+      "body": "read1 is .."
+    },
+    {
+      "id": 2,
+      "title": "read2",
+      "body": "read2 is .."
+    },
+    {
+      "title": "read3",
+      "body": "read3 is ..",
+      "id": 3
+    },
+    {
+      "title": "read4",
+      "body": "read4 is ..",
+      "id": 4
+    },
+    {
+      "title": "read5",
+      "body": "read5 is ..",
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
