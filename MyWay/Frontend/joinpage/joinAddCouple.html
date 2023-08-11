@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="join.css">
+  <link rel="stylesheet" href="joinAddCouple.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>joinAddCouple</title>
+</head>
+
+<body class="body">
+  <div class="joinbody">
+    <div class="jointopbar">회원가입</div>
+    <div class="joinLogoImg"><img src="./pingHeartLogo.png" alt="#"></div>
+    <!-- 바뀌는 부분만 css추가 -->
+    <div class="joinConnectDiv">
+      <div class="joinMyConnect">
+        <label class="joinMyConnectLabel" for="myCode">내 커플연결 코드</label><br>
+        <input class="joinMyConnectInput" type="text" id="myCode" name="myCode" value="12345678">
+        <label class="joinMyConnectLabel2" for="myCode">24시간 내에 연결하지 못하면 초기화 됩니다.</label><br>
+        <button class="joinMyConnectBtn">공유</button><br>
+      </div>
+
+      <div class="joinYourConnect">
+        <label class="joinYourConnectLabel" for="yourCode">상대방 커플연결 코드</label><br>
+        <input class="joinYourConnectInput" type="text" id="yourCode" name="yourCode" value=""
+          placeholder="상대방 코드를 입력해주세요.">
+        <br>
+      </div>
+    </div>
+    <div class="joinBtnDiv">
+      <button class="joinBtn" type="submit">전송</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,16 +1,25 @@
 - [Egoing 생활코딩 Next.js 공부](#egoing------nextjs---)
-  + [1. Install and Exec](#1-install-and-exec)
-  + [2. Sample app](#2-sample-app)
-  + [3. Deploy](#3-deploy)
-  + [4. building a skeleton](#4-building-a-skeleton)
-  + [5. Routing](#5-routing)
-    * [# 용어정리](#------)
-    * [# 절차](#----)
-    * [# 알 수 있는 것](#----------)
-    * [# layout 중첩하기](#--layout-----)
-    * [# 다이나믹 라우](#---------)
+    + [1. Install and Exec](#1-install-and-exec)
+    + [2. Sample app](#2-sample-app)
+    + [3. Deploy](#3-deploy)
+    + [4. building a skeleton](#4-building-a-skeleton)
+    + [5. Routing](#5-routing)
+    + [6. SPA](#6-spa)
+    + [7. Use Static Resoures](#7-use-static-resoures)
+    + [8. CSS](#8-css)
+    + [9. Backend](#9-backend)
+    + [10. Server & Client component](#10-server---client-component)
+    + [11. Dynamic Router And Binding](#11-dynamic-router-and-binding)
+    + [12. Create And Post Request](#12-create-and-post-request)
+    + [13. cache](#13-cache)
+    + [14.  client component로 부분적으로 전환](#14--client-component로-부분적으로-전환)
+    + [15. Update](#15-update)
+    + [16. 삭제](#16-삭제)
+    + [17. 환경변수 !](#17-환경변수-!)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 
 

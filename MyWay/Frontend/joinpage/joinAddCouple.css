@@ -1,0 +1,70 @@
+.joinConnectDiv {
+  background-color : white;
+
+}
+
+.joinMyConnect {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.joinMyConnectLabel {
+  color : #C998DC;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: large;
+}
+
+.joinMyConnectInput {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+  width: 70%;
+  border-color: #C998DC;
+  color: #909090;
+}
+
+.joinMyConnectBtn {
+  background-color : #C998DC;
+  border-radius: 5px;
+  border-color: white;
+  color: white;
+  margin-top: 10px;  
+  font-size: large;
+
+
+}
+
+.joinMyConnectLabel2 {
+  font-size: small;
+  color: #909090;
+
+}
+
+.joinYourConnect {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+.joinYourConnectLabel {
+  color : #C998DC;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: large;
+
+
+}
+
+.joinYourConnectInput {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+  width: 70%;
+  border-color: #C998DC;
+  color: #909090;
+
+}
