@@ -1,0 +1,123 @@
+
+.AccountHorizontalScrollDiv {
+  display: flex;
+  max-width: 420px;
+  color: black;
+   /* 넘쳐나는 내용 무조건 숨김 */
+   overflow-x:hidden;
+   overflow: overlay;
+}
+
+.AccountHorizontalScrollDivContent {
+  display: flex;
+}
+
+.AccountDayContent {
+  width: 60px
+}
+
+.AccountDayMonth {
+  font-size:14px;
+  color: #ABA9A9;
+  margin-bottom: 0;
+}
+
+.AccountDayDay {
+  font-size:24px;
+  margin-top: 0;
+
+}
+
+
+.AccountCostPayDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccountCostTotal {
+  color : #C998DC;
+}
+
+.NumOfAccountCostTotal {
+  margin-left: 15px;
+}
+
+.AccountCostDescription {
+  color: #ABA9A9;
+}
+
+.AccountMogImgDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccountMogImgDecriptionCircle {
+  border-radius: 8px;
+  border: solid 1px;
+  border-color: #ABA9A9;
+  font-size:14px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+
+}
+
+.AccountMogDetailDivDescription {
+  display: flex;
+  justify-content: space-between;
+  font-size:14px;
+  font-weight: bolder;
+  max-height: 30px;
+  border: 0;
+  background-color: transparent;
+}
+
+.AccountMogDetailDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AccountMogContentDiv {
+  min-height: 200px;
+  max-height: 300px;
+  width: 100%;
+  overflow: overlay;
+}
+
+.AccountMogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AccountMogOneOfContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccountMogOneStoreOfContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccountMogNotContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ABA9A9;
+}
+.AccountDateCostShareBtn {
+  background-color: #C998DC;
+  color: white;
+  border-color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}

@@ -22,5 +22,6 @@ export default function Control() {
         }} >delete</button>
       </> : null}
     </ul>
+    
   );
 }
