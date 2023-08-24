@@ -1,0 +1,85 @@
+.AccountBanckTopDiv {
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.AccountBankDescription {
+  display: flex;
+  font-size: larger;
+  font-weight: bold;
+  color: #D9D9D9;
+  margin-bottom: 0.5rem;
+}
+.AccountBanckTotalCost {
+  font-size: xx-large;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+
+}
+/* 아래 디테일 파트 */
+.AccountBankDetailsDiv {
+
+}
+
+.AccountBanckDetailsTotal {
+  font-size: larger;
+  font-weight: bolder;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: flex;
+
+}
+.AccountBanckDetailsTotalBtn {
+  background-color: white;
+  border: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.AccountBankDetailsTopbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.AccountBankDetailsShareBtn {
+  background-color: #C998DC;
+  color: white;
+  border-color: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.AccountBankDetailsBottom {
+  margin-bottom: 40px;
+}
+
+.AccountBankDetailsBottomDay {
+  color: #D9D9D9;
+}
+
+.AccountBankDetailsBottomOneOfContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.AccountBankDetailsBottomOneOfContent2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9cdea;
+}
+
+.AccountBankDetailsBottomOneStoreOfContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccountBankDetailsBottomOneStoreOfContent > img {
+  max-width: 60px;
+  max-height: 60px;
+  margin: 0.5rem;
+}

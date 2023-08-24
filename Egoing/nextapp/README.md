@@ -219,7 +219,7 @@ app/layout.js를 이용하여, app/create/page.js를 감싸는 하위 레이아�
 
 ##### #  json-server
 
-1. npx json-server --prot 9999 --watch db.json
+1. npx json-server --port 9999 --watch TempDB.json
 
    * --watch : 서버에 실시간 반영 ( db.json 변화 감지 )
 
